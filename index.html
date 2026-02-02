@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 IL NUOVO REGNO DI TIGROTTA 👑</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; background: #000; color: white; font-family: 'Segoe UI', Arial, sans-serif; overflow: hidden; }
+        
+        /* BARRA SUPERIORE */
+        .top-bar { height: 45px; background: #111; border-bottom: 3px solid #ff00ff; display: flex; align-items: center; box-shadow: 0 0 20px rgba(255, 0, 255, 0.4); z-index: 100; }
+        .ticker { flex: 1; color: #00f2ff; font-weight: bold; font-size: 14px; text-shadow: 0 0 5px #00f2ff; }
+        #clock { padding: 0 20px; color: #ff00ff; font-family: monospace; font-size: 20px; font-weight: bold; border-left: 2px solid #333; }
 
+        /* CONTENITORE */
+        .wrapper { display: flex; width: 100%; height: calc(100vh - 45px); padding: 15px; box-sizing: border-box; gap: 15px; background: linear-gradient(180deg, #050505 0%, #111 100%); }
+        
+        /* COLONNE */
+        .col { display: flex; flex-direction: column; border-radius: 20px; overflow: hidden; background: #0a0a0a; border: 2px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .col-left { width: 320px; border-color: #ff00ff; }
+        .col-main { flex: 1; border-color: #00f2ff; }
+        .col-right { width: 450px; border-color: #ff00ff; }
+
+        .header { padding: 12px; text-align: center; font-size: 12px; font-weight: bold; background: #1a1a1a; border-bottom: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; }
+        
+        iframe { width: 100%; flex-grow: 1; border: none; }
+        
+        /* ARENA DARK MODE */
+        .col-main iframe { filter: invert(90%) hue-rotate(180deg) brightness(1.1); }
+
+        /* INPUT E BOTTONI */
+        .input-bar { display: flex; padding: 10px; background: #1a1a1a; gap: 8px; border-bottom: 1px solid #333; }
+        input { flex: 1; background: #000; border: 1px solid #444; color: #fff; padding: 10px; font-size: 13px; border-radius: 10px; outline: none; }
+        input:focus { border-color: #ff00ff; }
+        .btn { cursor: pointer; border: none; font-weight: bold; font-size: 11px; padding: 10px 15px; border-radius: 10px; transition: 0.3s; text-transform: uppercase; }
+        .btn-vai { background: #ff00ff; color: #000; }
+        .btn-yt { background: #ff0000; color: #fff; margin-left: 10px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255,0,255,0.3); }
+
+        .visits { padding: 0 15px; border-left: 2px solid #333; display: flex; align-items: center; }
+        .visits img { height: 22px; filter: invert(1) hue-rotate(180deg) brightness(1.5); }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="ticker">
+        <marquee scrollamount="6">🌟 BENVENUTI NEL REGNO DI TIGROTTA 2.0 - VERSIONE SICURA AGGIORNATA 🌟</marquee>
+    </div>
+    <div class="visits">
+        <img src="https://www.cutercounter.com/hits.php?id=gvxpndp&nd=6&style=1" alt="counter">
+    </div>
+    <div id="clock">00:00:00</div>
+</div>
+
+<div class="wrapper">
+    <div class="col col-left">
+        <div class="header" style="color:#ff00ff;">🔒 STANZA SEGRETA</div>
+        <div class="input-bar">
+            <input type="text" id="room-name" placeholder="Scrivi nome stanza...">
+            <button class="btn btn-vai" onclick="joinPrivate()">VAI</button>
+        </div>
+        <iframe id="private-frame" src="about:blank"></iframe>
+    </div>
+
+    <div class="col col-main">
+        <div class="header" style="color:#00f2ff;">🏟️ ARENA PUBBLICA</div>
+        <iframe src="https://www5.cbox.ws/box/?boxid=960938&boxtag=AP3Bo3"></iframe>
+    </div>
+
+    <div class="col col-right">
+        <div class="header" style="color:#ff00ff;">
+            📺 YOUTUBE DJ
+            <button class="btn btn-yt" onclick="askYoutube()">+ CAMBIA VIDEO</button>
+        </div>
+        <iframe id="yt-player" src="https://www.youtube.com/embed/21X5lGlDOfg" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+        <div class="header" style="font-size: 9px; color: #666; background: #000;">I TUOI VIDEO PREFERITI QUI</div>
+    </div>
+</div>
+
+<script>
+    function updateClock() { 
+        document.getElementById('clock').textContent = new Date().toLocaleTimeString('it-IT'); 
+    }
+    setInterval(updateClock, 1000); 
+    updateClock();
+
+    function joinPrivate() {
+        var name = document.getElementById
