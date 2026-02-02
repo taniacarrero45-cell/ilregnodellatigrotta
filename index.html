@@ -88,4 +88,29 @@
     updateClock();
 
     function joinPrivate() {
-        var name = document.getElementById
+        var name = document.getElementById('room-name').value;
+        if(name) { 
+            document.getElementById('private-frame').src = "https://hack.chat/?" + name; 
+        }
+    }
+
+    function askYoutube() {
+        var url = prompt("Incolla il link del video di YouTube:");
+        if (url) {
+            var videoId = "";
+            if (url.includes("v=")) {
+                videoId = url.split("v=")[1].split("&")[0];
+            } else if (url.includes("youtu.be/")) {
+                videoId = url.split("youtu.be/")[1].split("?")[0];
+            } else {
+                videoId = url.split("/").pop().split("?")[0];
+            }
+            if(videoId) {
+                document.getElementById('yt-player').src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
