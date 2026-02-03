@@ -1,43 +1,107 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 TIGROTTA OFFICIAL REALM 👑</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #050505; /* Sfondo nero profondo */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+        /* SFONDO ANIMATO ELEGANTE */
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #2b002b 0%, #000000 100%);
+            z-index: -1;
+        }
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        .container {
+            text-align: center;
+            padding: 50px;
+            border: 2px solid #ff00ff;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 60px rgba(255, 0, 255, 0.3);
+            max-width: 80%;
+        }
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            color: #ff00ff;
+            text-shadow: 0 0 25px #ff00ff;
+        }
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+        /* IL PULSANTE TELEGRAM CHE PULSA */
+        .btn-telegram {
+            display: inline-block;
+            padding: 25px 60px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            background: linear-gradient(45deg, #0088cc, #00aaff);
+            border-radius: 60px;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5);
+            animation: pulse 2s infinite;
+            cursor: pointer;
+        }
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        .btn-telegram:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 0 40px #00aaff;
+            background: linear-gradient(45deg, #00aaff, #00d4ff);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0, 136, 204, 0.8); }
+            100% { transform: scale(1); box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5); }
+        }
+
+        p {
+            margin-top: 30px;
+            color: #aaa;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            font-size: 5rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="logo">👑</div>
+        <h1>IL REGNO DI TIGROTTA</h1>
+        
+        <a href="https://t.me/IL_TUO_NOME_UTENTE" class="btn-telegram" target="_blank">
+            🚀 ENTRA IN VIDEOCHAT
+        </a>
+
+        <p>Basta testi freddi. Clicca e guardiamoci in faccia!</p>
+    </div>
+
+</body>
+</html>
