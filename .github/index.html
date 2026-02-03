@@ -3,40 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIGROTTA CHAT</title>
+    <title>👑 TIGROTTA SUPER CHAT 👑</title>
     <style>
         body {
-            background-color: #1a1a1a; /* Sfondo scuro che non stanca */
+            background: #000;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             height: 100vh;
-            margin: 0;
         }
-        h1 { color: #ff00ff; }
-        .chat-container {
-            width: 90%;
-            max-width: 500px;
-            background: #333;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+
+        h1 {
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff;
+            margin: 15px 0;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* CHAT GIGANTE */
+        .chat-box {
+            width: 95%; /* Quasi tutta la larghezza dello schermo */
+            height: 80vh; /* L'80% dell'altezza dello schermo */
+            background: #111;
+            border: 4px solid #00f2ea;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 242, 234, 0.6);
+            overflow: hidden;
+            position: relative;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer {
+            margin-top: 10px;
+            color: #ff00ff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h1>👑 BENVENUTI DA TIGROTTA 👑</h1>
+    <h1>👑 TIGROTTA CHAT 👑</h1>
 
-    <div class="chat-container">
-        <p>Chat in caricamento...</p>
-        
+    <div class="chat-box">
+        <p style="text-align: center; margin-top: 20%;">Caricamento Chat Gigante...</p>
     </div>
 
-    <p style="margin-top: 20px;">Scrivimi e divertiamoci!</p>
+    <div class="footer">🔥 Scrivi ora nel Regno! 🔥</div>
 
 </body>
 </html>
