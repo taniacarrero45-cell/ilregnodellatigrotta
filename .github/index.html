@@ -3,105 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👑 TIGROTTA OFFICIAL REALM 👑</title>
+    <title>👑 TIGROTTA TOK 👑</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #050505; /* Sfondo nero profondo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
+        body { background-color: #000; color: white; font-family: sans-serif; margin: 0; text-align: center; }
+        
+        h1 { color: #ff00ff; text-shadow: 0 0 10px #ff00ff; margin: 20px 0; }
+
+        /* LA FINESTRA TIPO TIKTOK */
+        .video-container {
+            width: 350px; /* Larghezza cellulare */
+            height: 600px; /* Altezza cellulare */
+            margin: 0 auto;
+            border: 4px solid #00f2ea;
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: 0 0 30px #ff00ff;
         }
 
-        /* SFONDO ANIMATO ELEGANTE */
-        .background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, #2b002b 0%, #000000 100%);
-            z-index: -1;
-        }
+        iframe { width: 100%; height: 100%; border: none; }
 
-        .container {
-            text-align: center;
-            padding: 50px;
-            border: 2px solid #ff00ff;
-            border-radius: 40px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 60px rgba(255, 0, 255, 0.3);
-            max-width: 80%;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 7px;
-            color: #ff00ff;
-            text-shadow: 0 0 25px #ff00ff;
-        }
-
-        /* IL PULSANTE TELEGRAM CHE PULSA */
         .btn-telegram {
             display: inline-block;
-            padding: 25px 60px;
-            font-size: 1.8rem;
-            font-weight: bold;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #0088cc;
             color: white;
             text-decoration: none;
-            background: linear-gradient(45deg, #0088cc, #00aaff);
-            border-radius: 60px;
-            transition: all 0.4s ease;
-            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5);
-            animation: pulse 2s infinite;
-            cursor: pointer;
-        }
-
-        .btn-telegram:hover {
-            transform: scale(1.1) translateY(-5px);
-            box-shadow: 0 0 40px #00aaff;
-            background: linear-gradient(45deg, #00aaff, #00d4ff);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5); }
-            50% { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0, 136, 204, 0.8); }
-            100% { transform: scale(1); box-shadow: 0 15px 30px rgba(0, 136, 204, 0.5); }
-        }
-
-        p {
-            margin-top: 30px;
-            color: #aaa;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-
-        .logo {
-            font-size: 5rem;
-            margin-bottom: 10px;
+            border-radius: 50px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="background"></div>
+    <h1>👑 REGNO DI TIGROTTA 👑</h1>
 
-    <div class="container">
-        <div class="logo">👑</div>
-        <h1>IL REGNO DI TIGROTTA</h1>
-        
-        <a href="https://t.me/mariaterry cappola class="btn-telegram" target="_blank">
-            🚀 ENTRA IN VIDEOCHAT
-        </a>
-
-        <p>Basta testi freddi. Clicca e guardiamoci in faccia!</p>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed?listType=playlist&list=PLu6_f6t9vK_K-nO7FST7zWIn83_AixR3d" allowfullscreen></iframe>
     </div>
+
+    <br>
+    <a href="https://t.me/IL_TUO_NOME_UTENTE" class="btn-telegram">🚀 SCRIVIMI SU TELEGRAM</a>
+
+    <p>Scorri i video qui sopra!</p>
 
 </body>
 </html>
